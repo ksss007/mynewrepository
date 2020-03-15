@@ -1,0 +1,2 @@
+# mynewrepository
+Изучение Git
