@@ -1,0 +1,110 @@
+Система управления пакетами pip
+pip --version
+
+
+Установка модулей
+pip install tabulate
+pip uninstall tabulate
+pip install --upgrade tabulate
+
+pip или pip3
+pip3 --version
+python3.7 -m pip install tabulate
+
+Виртуальные окружения virtualenvwrapper
+sudo pip3.7 install virtualenvwrapper
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.7
+export WORKON_HOME=~/venv
+. /usr/local/bin/virtualenvwrapper.sh
+exec bash
+
+Работа с виртуальными окружениями
+mkvirtualenv --python=/usr/local/bin/python3.7 pyneng
+deactivate
+workon pyneng
+workon Test
+rmvirtualenv Test
+lssitepackages
+
+
+Встроенный модуль venv
+python3.7 -m venv new/pyneng
+ls -ls new/pyneng
+source new/pyneng/bin/activate
+deactivate
+
+Установка пакетов
+pip install simplejson
+
+
+Основы Git
+sudo apt-get install git
+
+$ git config --global user.name "username"
+$ git config --global user.email "username.user@example.com"
+
+$ git config --list
+
+Инициализация репозитория
+[~/tools/first_repo]
+$ git init
+Initialized empty Git repository in /home/vagrant/tools/first_repo/.git
+
+Отображение статуса репозитория в приглашении
+
+
+cd ~
+git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt --depth=1
+GIT_PROMPT_ONLY_IN_REPO=1
+source ~/.bash-git-prompt/gitprompt.sh
+exec bash
+
+git status
+Файл .gitignore
+*.un~
+
+git add
+git commit
+git diff
+git diff --staged
+git log
+git log -p
+git log --stat
+
+Аутентификация на GitHub
+ssh-keygen -t rsa -b 4096 -C "github_email@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+
+
+Добавление SSH-ключа на GitHub
+cat ~/.ssh/id_rsa.pub
+$ ssh -T git@github.com
+Hi username! You've successfully authenticated, but GitHub does not provide shell 
+
+Работа со своим репозиториемaccess.
+git clone git@github.com/pyneng/online-2-natasha-samoylenko.git
+
+Синхронизация локального репозитория с удалённым
+git pull
+git add
+git commit -m "Сделаны задания 4.1-4.3".
+
+Push на GitHub
+git push origin master
+
+Работа с репозиторием заданий и примеров
+Копирование репозитория с GitHub
+https://github.com/natenka/pyneng-examples-exercises
+git pull
+Просмотр изменений
+git log -p -1
+
+
+
+
+
+
+
+
+
